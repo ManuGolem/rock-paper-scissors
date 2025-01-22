@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap");
+:root {
+	--bg1:hsl(214, 47%, 23%);
+    --bg2:hsl(237, 49%, 15%);
+	--ScissorsGradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+	--PaperGradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+	--RockGradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+	--DarkText: hsl(229, 25%, 31%);
+	--ScoreText: hsl(229, 64%, 46%);
+	--HeaderOutline: hsl(217, 16%, 45%);
+}
+* {
+	font-family: "Barlow Semi Condensed", serif;
+	font-style: normal;
+	font-weight: 700;
+	font-weight: 600;
+}
+body{
+    background: radial-gradient(circle at top ,var(--bg1),var(--bg2));
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.title-name{
+    display: flex;
+    /* background-color: red; */
+    justify-content: space-between;
+    width: 50%;
+    margin:auto;
+    padding:1rem 2rem;
+    border-radius: 1rem;
+    border:2px solid var(--HeaderOutline);
+}
+.title-name img{
+    width: 10rem;
+}
+.score{
+    background-color: white;
+    color:var(--ScoreText);
+    border-radius: 1rem;
+    padding-inline:4rem;
+    text-align: center;
+    font-size:16px;
+}
+
+
+/* @media 
+
+- Mobile: 375px
+- Desktop: 1366px */
