@@ -2,9 +2,12 @@
 :root {
 	--bg1:hsl(214, 47%, 23%);
     --bg2:hsl(237, 49%, 15%);
-	--ScissorsGradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
-	--PaperGradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
-	--RockGradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+	--ScissorsGradient: hsl(39, 89%, 49%); 
+    --ScissorsGradient1:hsl(40, 84%, 53%);
+	--PaperGradient: hsl(230, 89%, 62%);
+    --PaperGradient1:hsl(230, 89%, 65%);
+	--RockGradient: hsl(349, 71%, 52%);
+    --RockGradient1: hsl(349, 70%, 56%);
 	--DarkText: hsl(229, 25%, 31%);
 	--ScoreText: hsl(229, 64%, 46%);
 	--HeaderOutline: hsl(217, 16%, 45%);
@@ -14,16 +17,23 @@
 	font-style: normal;
 	font-weight: 700;
 	font-weight: 600;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
 }
 body{
     background: radial-gradient(circle at top ,var(--bg1),var(--bg2));
     background-repeat: no-repeat;
     height: 100vh;
 }
+main{
+    padding-top:4rem;
+}
 .title-name{
     display: flex;
     /* background-color: red; */
     justify-content: space-between;
+    align-items: center;
     width: 50%;
     margin:auto;
     padding:1rem 2rem;
@@ -32,6 +42,7 @@ body{
 }
 .title-name img{
     width: 10rem;
+    margin-block:0.5rem;
 }
 .score{
     background-color: white;
@@ -40,9 +51,59 @@ body{
     padding-inline:4rem;
     text-align: center;
     font-size:16px;
+    padding-block: 1rem;
+    h1{
+        font-size: 50px;
+        color:var(--DarkText)
+    }
 }
+.game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    width: 40rem;
+    margin-top:5rem;
+    background-image: url(images/bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    height: 30rem;
+    flex-wrap:wrap;
+    gap:5rem;
+    div{
+        background-color:white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 12rem;
+        height: 12rem;
+        border:1rem solid var(--ScissorsGradient);
+        img{
+            width: 4.2rem;
+        }
+        box-shadow: inset 0px 8px 0px #dcdfe9 , 0px 10px 0px #c76c1d;
+    }
+    div:first-child{
+        border:1.5rem solid var(--PaperGradient);
+        box-shadow: inset 0px 8px 0px #dcdfe9 , 0px 10px 0px #2945c2;
+    }
+    div:last-child{
+        margin-bottom: 2rem;
+        border:1rem solid var(--RockGradient);
+        box-shadow: inset 0px 8px 0px #dcdfe9 , 0px 10px 0px #9d1634;
+    }
+}
+footer{
+    text-align: center;
+    margin:0;
+    padding: 0;
+    margin-top:4rem;
 
-
+}
 /* @media 
 
 - Mobile: 375px
