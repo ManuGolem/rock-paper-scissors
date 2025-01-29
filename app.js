@@ -1,12 +1,7 @@
-const divJuego = document.querySelector(".container");
-const botones = divJuego.querySelectorAll("div");
 const game = document.querySelector(".game");
+const score= document.querySelector(".puntuacion")
 document.addEventListener("DOMContentLoaded", () => {
-	botones.forEach((boton) => {
-		boton.addEventListener("click", (e) => {
-			startGame(boton);
-		});
-	});
+	game.appendChild(crearJuego());
 });
 function startGame(elemento) {
 	if (game.children[0].classList.contains("container")) {
@@ -25,6 +20,7 @@ function startGame(elemento) {
 		nuevaDivJuego.appendChild(thpick);
 		nuevaDivJuego.appendChild(elemento);
 		nuevaDivJuego.appendChild(aElegir);
+		const divJuego=document.querySelector(".container")
 		game.replaceChild(nuevaDivJuego, divJuego);
 		setTimeout(() => {
 			if (eleccion == 0) {
@@ -58,14 +54,23 @@ function startGame(elemento) {
 				const condicionesVictoria = { paper: 0, scissors: 1, rock: 2 };
 				if (eleccion === condicionesVictoria[clase]) {
 					tituloResultado.textContent = "YOU WIN";
+					elemento.classList.add("fondo-wave");
+					let puntaje=Number(score.textContent)
+					puntaje++;
+					score.textContent=puntaje;
 				} else {
 					tituloResultado.textContent = "YOU LOSE";
+					aElegir.classList.add("fondo-wave")
+					let puntaje=Number(score.textContent);
+					puntaje--;
+					score.textContent=puntaje;
 				}
 			}
 			const botonAgain = document.createElement("button");
 			botonAgain.textContent = "PLAY AGAIN";
 			botonAgain.addEventListener("click", () => {
-				location.reload();
+				const divCopia = crearJuego();
+				game.replaceChild(divCopia, nuevaDivJuego);
 			});
 			divResultado.classList.add("resultado");
 			divResultado.appendChild(tituloResultado);
@@ -74,4 +79,24 @@ function startGame(elemento) {
 			nuevaDivJuego.appendChild(divResultado);
 		}, 1000);
 	}
+}
+function crearJuego() {
+	const divJuego = document.createElement("div");
+	divJuego.classList.add("container");
+	divJuego.innerHTML = `			  <div>
+          								<img alt="paper" src="images/icon-paper.svg">
+        							  </div>
+        							  <div>
+         								<img alt="scissors" src="images/icon-scissors.svg">
+        							  </div>
+        							  <div>
+         								<img alt="rock" src="images/icon-rock.svg">
+       								  </div>`;
+	const botones = divJuego.querySelectorAll("div");
+	botones.forEach(boton=>{
+		boton.addEventListener("click",()=>{
+			startGame(boton)
+		})
+	})
+	return divJuego;
 }
