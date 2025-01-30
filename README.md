@@ -27,15 +27,15 @@ Users should be able to:
 
 - Desktop :
 
-![Img desktop]()
+![Img desktop](images/Screenshot%202025-01-30%20at%2016-02-16%20Frontend%20Mentor%20Rock%20Paper%20Scissors.png)
 
 - Mobile:
 
-![Img Mobile]()
+![Img Mobile](images/Screenshot%202025-01-30%20at%2016-02-28%20Frontend%20Mentor%20Rock%20Paper%20Scissors.png)
 
 ### Links
 
-- Live Site URL: [time-tracking]()
+- Live Site URL: [rock-paper-scissors]()
 
 ## My process
 
