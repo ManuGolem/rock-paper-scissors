@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <main>
-    <header class="title-name">
-      <img class="logo" src="images/logo.svg">
-      <div class="score">
-        <p>SCORE</p>
-        <h1 class="puntuacion">12</h1>
-      </div>
-    </header>
-    <div class="game">
-    </div>
-  </main>
-  <footer>
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
-    <a href="https://manuelcarreras.netlify.app">Manuel Carreras</a>.
-  </footer>
-  <script src="app.js"></script>
-</body>
+		<title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main>
+			<header class="title-name">
+				<img class="logo" src="images/logo.svg" />
+				<div class="score">
+					<p>SCORE</p>
+					<h1 class="puntuacion">12</h1>
+				</div>
+			</header>
+			<div class="game"></div>
+			<div class="modal">
+				<dialog>
+          <div>
+            <h1>RULES</h1>
+            <form method="dialog">
+              <button><img src="images/icon-close.svg" /></button>
+            </form>
+            <img src="images/image-rules.svg" alt="rules" />
+          </div>
+				</dialog>
+				<button id="abrir-modal">RULES</button>
+			</div>
+		</main>
+		<footer>
+			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+			<a href="https://manuelcarreras.netlify.app">Manuel Carreras</a>.
+		</footer>
+		<script src="app.js"></script>
+	</body>
 </html>
