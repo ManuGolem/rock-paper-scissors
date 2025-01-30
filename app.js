@@ -1,7 +1,12 @@
 const game = document.querySelector(".game");
+const dialog=document.querySelector("dialog")
+const abrirModal=document.querySelector("#abrir-modal")
 const score= document.querySelector(".puntuacion")
 document.addEventListener("DOMContentLoaded", () => {
 	game.appendChild(crearJuego());
+	abrirModal.addEventListener("click",()=>{
+		dialog.showModal();
+	})
 });
 function startGame(elemento) {
 	if (game.children[0].classList.contains("container")) {
