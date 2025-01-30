@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [rock-paper-scissors]()
+- Live Site URL: [rock-paper-scissors](https://manugolem.github.io/rock-paper-scissors/)
 
 ## My process
 
